@@ -5,7 +5,7 @@
 
 A NodeJS module to interface with Nestpay Payment Gateway.
 
-**"stable version will be released in a month"**
+**A stable version will be released very soon.**
 
 ## Installation
 ```
