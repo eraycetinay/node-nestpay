@@ -3,7 +3,8 @@
 [![dependency Status](https://david-dm.org/eraycetinay/node-nestpay.svg)](https://david-dm.org/eraycetinay/node-nestpay.svg)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
-A NodeJS module to interface with Nestpay Payment Gateway. 
+A NodeJS module to interface with Nestpay Payment Gateway.
+
 **"stable version will be released in a month"**
 
 ## Installation
