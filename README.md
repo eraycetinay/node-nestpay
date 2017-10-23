@@ -4,7 +4,7 @@ A NodeJS module to interface with Nestpay Payment Gateway.
 
 ## Installation
 ```
-npm install gulp-grab
+npm install node-nestpay
 ```
 ## Methods
 - Purchase
