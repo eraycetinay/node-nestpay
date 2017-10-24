@@ -31,7 +31,7 @@ npm install node-nestpay
 - Ziraat Bankası
 ## Example
 ```
-var nodeNestpay=require('./index.js');
+var nodeNestpay=require('node-nestpay');
 var config = {
     name: 'ISBANK',
     password: 'ISBANK07',
