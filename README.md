@@ -47,7 +47,7 @@ nestpay = new nodeNestpay({
 - storekey: Required for 3d,
 - callbackSuccess: Required for 3d,
 - callbackFail: Required for 3d,
-- mode: Default: 'P', 'T' for test..,
+- mode: Default: 'P', 'T' for test,
 - currency: Default: 'USD', Any valid currency code, 
 - orderId: Default: '', 'Auto' for random id by uuidv1,
 - secureFormat: Default: '', 'html' for html form.
