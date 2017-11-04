@@ -32,7 +32,7 @@ npm install node-nestpay
 ## Initialization
 **Basic Setup**
 ```
-var nodeNestpay = require('../index.js');
+var nodeNestpay = require('node-nestpay');
 nestpay = new nodeNestpay({
     name: 'ISBANK',
     password: 'ISBANK07',
