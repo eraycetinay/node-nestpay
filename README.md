@@ -41,24 +41,36 @@ nestpay = new nodeNestpay({
 });
 ```
 **Options:**
-name: Required,
-password: Required,
-clientId: Required,
-storekey: Required for 3d,
-callbackSuccess: Required for 3d,
-callbackFail: Required for 3d,
-mode: Default: 'P', 'T' for test..,
-currency: Default: 'USD', Any valid currency code, 
-orderId: Default: '', 'Auto' for random id by uuidv1,
-secureFormat: Default: '', 'html' for html form.
-endpoint: Default: 'asseco', Any valid endpoint name,
-lang: Default: 'tr', Any valid language code for 3d screen
+- name: Required,
+- password: Required,
+- clientId: Required,
+- storekey: Required for 3d,
+- callbackSuccess: Required for 3d,
+- callbackFail: Required for 3d,
+- mode: Default: 'P', 'T' for test..,
+- currency: Default: 'USD', Any valid currency code, 
+- orderId: Default: '', 'Auto' for random id by uuidv1,
+- secureFormat: Default: '', 'html' for html form.
+- endpoint: Default: 'asseco', Any valid endpoint name,
+- lang: Default: 'tr', Any valid language code for 3d screen
 
 ### Methods
-..
 #### Purchase
 ```
+nestpay.purchase({
+    number: '5456165456165454',
+    year: '12',
+    month: '12',
+    cvv: '000',
+    amount: '10'
+    //additional options
+    installment: 3,
+    orderId: '123456',
+    groupId: '123456',
+    transId: '123456',           
+})
 ```
+
 ## Examples
 **Purchase, Authorize, Capture, Void, Refund, Secure3d, Secure3dPurchase examples can be found in examples folder.**
 ```
