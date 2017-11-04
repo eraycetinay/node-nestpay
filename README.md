@@ -16,7 +16,7 @@ npm install node-nestpay
 - Void
 - Refund
 - Secure3d
-- Secure3d Purchase
+- Secure3dPurchase
 ## Endpoints
 - İş Bankası
 - Akbank
@@ -58,6 +58,7 @@ nestpay = new nodeNestpay({
 #### Purchase
 ```
 nestpay.purchase({
+    //required options
     number: '5456165456165454',
     year: '12',
     month: '12',
@@ -70,7 +71,80 @@ nestpay.purchase({
     transId: '123456',           
 })
 ```
-
+#### Authorize
+```
+nestpay.authorize({
+    //required options
+    number: '5456165456165454',
+    year: '12',
+    month: '12',
+    cvv: '000',
+    amount: '10'
+    //additional options
+    installment: 3,
+    orderId: '123456',
+    groupId: '123456',
+    transId: '123456',           
+})
+```
+#### Capture
+```
+nestpay.capture({
+    //required options
+    orderId: '123456'       
+})
+```
+#### Refund
+```
+nestpay.refund({
+    //required options
+    orderId: '123456',
+    amount: 10
+})
+```
+#### Void
+```
+nestpay.void({
+    //required options
+    orderId: '123456'       
+})
+```
+#### Secure3d
+```
+nestpay.secure3d({
+    //required options
+    number: '5456165456165454',
+    year: '12',
+    month: '12',
+    cvv: '000',
+    amount: '10'
+    //additional options 
+    orderId: '123456',
+    groupId: '123456',
+    transId: '123456',    
+    lang: 'tr',
+    timestamp: '1509830052240',
+    secureFormat: 'html'
+})
+```
+#### Secure3dPurchase
+```
+nestpay.secure3dPurchase({
+    //required options
+    HASHPARAMSVAL: 'xxx',
+    HASH: 'xxx',
+    md: 'xxx',
+    xid: 'xxx',
+    eci: 'xxx',
+    cavv: 'xxx',
+    amount: '10'
+    //additional options
+    installment: 3,
+    orderId: '123456',
+    groupId: '123456',
+    transId: '123456',           
+})
+```
 ## Examples
 **Purchase, Authorize, Capture, Void, Refund, Secure3d, Secure3dPurchase examples can be found in examples folder.**
 ```
@@ -101,3 +175,5 @@ nestpay.purchase({
 
 });
 ```
+## License
+[MIT](LICENSE) license.
