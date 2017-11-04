@@ -1,0 +1,25 @@
+<html>
+<head>
+</html>
+<body>
+    <form id="nestPay3d" method="post" action="<%= postData.url %>">
+        <input type="hidden" name="pan" value="<%= postData.form.pan %>" size="20" />
+        <input type="hidden" name="cv2" value="<%= postData.form.cv2 %>" size="4" />
+        <input type="hidden" name="Ecom_Payment_Card_ExpDate_Year" value="<%= postData.form.Ecom_Payment_Card_ExpDate_Year %>" />
+        <input type="hidden" name="Ecom_Payment_Card_ExpDate_Month" value="<%= postData.form.Ecom_Payment_Card_ExpDate_Month %>" />
+        <input type="hidden" name="clientid" value="<%= postData.form.clientId %>" />
+        <input type="hidden" name="amount" value="<%= postData.form.amount %>" />
+        <input type="hidden" name="oid" value="<%= postData.form.oid %>" />
+        <input type="hidden" name="okUrl" value="<%= postData.form.okUrl %>" />
+        <input type="hidden" name="failUrl" value="<%= postData.form.failUrl %>" />
+        <input type="hidden" name="rnd" value="<%= postData.form.rnd %>" />
+        <input type="hidden" name="hash" value="<%= postData.form.hash %>" />
+        <input type="hidden" name="storetype" value="<%= postData.form.storetype %>" />
+        <input type="hidden" name="lang" value="<%= postData.form.lang %>" />
+        <input type="hidden" name="currency" value="<%= postData.form.currency %>" />
+    </form>
+    <script type="text/javascript">
+    document.getElementById("nestPay3d").submit();
+    </script>
+</body>
+</html>
