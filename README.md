@@ -145,6 +145,11 @@ nestpay.secure3dPurchase({
     transId: '123456',           
 })
 ```
+### Endpoint List
+```
+//You can use any of this endpoints as option in initialization.
+'test', 'asseco', 'isbank', 'akbank', 'finansbank', 'denizbank', 'kuveytturk', 'halkbank', 'anadolubank', 'hsbc', 'ziraatbank, 'ingbank, 'citibank'
+```
 ## Examples
 **Purchase, Authorize, Capture, Void, Refund, Secure3d, Secure3dPurchase examples can be found in examples folder.**
 ```
