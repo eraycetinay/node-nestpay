@@ -14,7 +14,6 @@ nestpay = new nodeNestpay({
     callbackSuccess: 'http://localhost:3000/success',
     callbackFail: 'http://localhost:3000/fail',
     endpoint: 'asseco',
-    endpoint3d: 'asseco',
     currency: 'TRY',
 });
 
@@ -61,7 +60,7 @@ app.post('/success', function(req, res) {
     }).catch(function(securePurchaseError) {
 
         res.send(securePurchaseError);
-        
+
     });
 });
 

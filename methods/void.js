@@ -12,7 +12,7 @@ module.exports = function(nestpay) {
                 OrderId: value.orderId
             };
 
-            var url=that.config.endpoints[value.endpoint || that.config.endpoint];
+            var url=that.config.endpoints[that.config.endpoint];
             that.request(url,data).then(resolve).catch(reject);
         });
     }

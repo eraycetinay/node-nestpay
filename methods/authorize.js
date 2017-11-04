@@ -29,7 +29,7 @@ module.exports = function(nestpay) {
                 Cvv2Val: value.cvv || ''
             };
 
-            var url=that.config.endpoints[value.endpoint || that.config.endpoint];
+            var url=that.config.endpoints[that.config.endpoint];
             that.request(url,data).then(resolve).catch(reject);
         });
     }

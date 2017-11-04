@@ -7,7 +7,7 @@ nestpay = new nodeNestpay({
     storekey: 'TRPS1234',
     callbackSuccess: 'http://localhost:3000/success',
     callbackFail: 'http://localhost:3000/fail',
-    endpoint3d: 'asseco',
+    endpoint: 'asseco',
     currency: 'TRY',
 });
 

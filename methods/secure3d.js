@@ -30,7 +30,7 @@ module.exports = function(nestpay) {
                     storetype: '3d',
                     lang: value.lang || that.config.lang
                 },
-                url: that.config.endpoints3d[that.config.endpoint3d]
+                url: that.config.endpoints3d[that.config.endpoint]
             };
             var hashstr = data.form.clientId + data.form.oid + data.form.amount + data.form.okUrl + data.form.failUrl + data.form.rnd + (value.storekey || that.config.storekey);
             data.form.hash = crypto.createHash('sha1').update(hashstr).digest('base64');

@@ -16,13 +16,11 @@ function nestpay(value) {
         storekey: value.storekey || '',
         mode: value.mode || 'P',
         currency: value.currency || 'USD',
-        ip: value.ip || '127.0.0.1',
         orderId: value.orderId || 'Auto',
         callbackSuccess: value.callbackSuccess || '',
         callbackFail: value.callbackFail || '',
         secureFormat: value.secureFormat || '',
         endpoint: value.endpoint || 'asseco',
-        endpoint3d: value.endpoint3d || 'asseco',
         endpoints: {
             'test': 'https://testvpos.asseco-see.com.tr/fim/api',
             'asseco': 'https://entegrasyon.asseco-see.com.tr/fim/api',
@@ -55,9 +53,7 @@ function nestpay(value) {
             'citibank': 'citibank.est.com.tr',
             'cardplus': 'cardplus.est.com.tr'
         },
-        amount: 0,
-        storetype: '',
-        lang: 'tr'
+        lang: value.endpoint || 'tr'
     }
 }
 
