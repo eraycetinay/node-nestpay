@@ -29,6 +29,36 @@ npm install node-nestpay
 - Citibank
 - Cardplus
 - Ziraat Bankası
+## Initialization
+**Basic Setup**
+```
+var nodeNestpay = require('../index.js');
+nestpay = new nodeNestpay({
+    name: 'ISBANK',
+    password: 'ISBANK07',
+    clientId: 700100000,
+    endpoint: 'asseco'
+});
+```
+**Options:**
+name: Required,
+password: Required,
+clientId: Required,
+storekey: Required for 3d,
+callbackSuccess: Required for 3d,
+callbackFail: Required for 3d,
+mode: Default: 'P', 'T' for test..,
+currency: Default: 'USD', Any valid currency code, 
+orderId: Default: '', 'Auto' for random id by uuidv1,
+secureFormat: Default: '', 'html' for html form.
+endpoint: Default: 'asseco', Any valid endpoint name,
+lang: Default: 'tr', Any valid language code for 3d screen
+
+### Methods
+..
+#### Purchase
+```
+```
 ## Examples
 **Purchase, Authorize, Capture, Void, Refund, Secure3d, Secure3dPurchase examples can be found in examples folder.**
 ```
