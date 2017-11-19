@@ -16,7 +16,7 @@ npm install node-nestpay
 - Void
 - Refund
 - Secure3d
-- Secure3dPurchase
+- SecurePurchase
 ## Endpoints
 - İş Bankası
 - Akbank
@@ -127,9 +127,9 @@ nestpay.secure3d({
     secureFormat: 'html'
 })
 ```
-#### Secure3dPurchase
+#### SecurePurchase
 ```
-nestpay.secure3dPurchase({
+nestpay.securePurchase({
     //required options
     HASHPARAMSVAL: 'xxx',
     HASH: 'xxx',
@@ -151,7 +151,7 @@ nestpay.secure3dPurchase({
 'test', 'asseco', 'isbank', 'akbank', 'finansbank', 'denizbank', 'kuveytturk', 'halkbank', 'anadolubank', 'hsbc', 'ziraatbank, 'ingbank, 'citibank'
 ```
 ## Examples
-**Purchase, Authorize, Capture, Void, Refund, Secure3d, Secure3dPurchase examples can be found in examples folder.**
+**Purchase, Authorize, Capture, Void, Refund, Secure3d, SecurePurchase examples can be found in examples folder.**
 ```
 var nodeNestpay = require('../index.js');
 
