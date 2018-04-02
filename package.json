@@ -1,6 +1,6 @@
 {
   "name": "node-nestpay",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Eray Cetinay <eraycetinay@gmail.com>",
   "main": "index.js",
   "description": "A NodeJS module to interface with Nestpay Payment Gateway.",
