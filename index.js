@@ -53,7 +53,7 @@ function nestpay(value) {
             'citibank': 'https://citibank.est.com.tr/fim/est3Dgate',
             'cardplus': 'https://cardplus.est.com.tr/fim/est3Dgate'
         },
-        lang: value.endpoint || 'tr'
+        lang: value.lang || 'tr'
     }
 }
 
@@ -64,5 +64,6 @@ require('./methods/refund')(nestpay);
 require('./methods/capture')(nestpay);
 require('./methods/secure3d')(nestpay); 
 require('./methods/securePurchase')(nestpay); 
+require('./methods/secureAuthorize')(nestpay); 
 require('./methods/request')(nestpay); 
 module.exports = nestpay; 
