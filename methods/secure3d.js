@@ -19,8 +19,8 @@ module.exports = function(nestpay) {
                     clientId: that.config.clientId,
                     oid: order,
                     amount: value.amount || '',
-                    okUrl: that.config.callbackSuccess,
-                    failUrl: that.config.callbackFail,
+                    okUrl: value.callbackSuccess || that.config.callbackSuccess,
+                    failUrl: value.callbackFail || that.config.callbackFail,
                     rnd: value.timestamp || new Date().getTime(),
                     currency: currencyNumber,
                     pan: value.number || '',
@@ -36,7 +36,7 @@ module.exports = function(nestpay) {
             data.form.hash = crypto.createHash('sha1').update(hashstr).digest('base64');
 
             if ((!value.secureFormat && that.config.secureFormat == 'html') || (value.secureFormat && value.secureFormat.toLowerCase() == 'html')) {
-                var content = fs.readFileSync(`./templates/secure.html`, 'utf8');
+                var content = fs.readFileSync(require('path').resolve(__dirname, `../templates/secure.html`), 'utf8');
                 resolve(ejs.render(content, { postData: data }));
             } else {
                 resolve(data);
