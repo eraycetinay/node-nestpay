@@ -17,6 +17,7 @@ npm install node-nestpay
 - Refund
 - Secure3d
 - SecurePurchase
+- SecureAuthorize
 ## Endpoints
 - İş Bankası
 - Akbank
