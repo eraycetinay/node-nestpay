@@ -18,7 +18,7 @@ module.exports = function(nestpay) {
                 Mode: that.config.mode,
                 Type: 'PreAuth',
                 Currency: currencyNumber,
-                Taksit: value.installment || that.config.installment,
+                Taksit: value.installment || undefined,
                 OrderId: order,
                 GroupId: value.groupId || '',
                 TransId: value.transId || '',
