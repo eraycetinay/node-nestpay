@@ -2,7 +2,7 @@
  * @author  Tümay Çeber <tumayceber@gmail.com>
  * @date 08.04.2018
  */
-export type endpoint = string | "test" | "asseco" | "isbank" | "akbank" | "finansbank" | "denizbank" | "kuveytturk" | "halkbank" | "anadolubank" | "hsbc" | "ziraatbank" | "ingbank" | "citibank" | "teb";
+export type endpoint = "test" | "asseco" | "isbank" | "akbank" | "finansbank" | "denizbank" | "kuveytturk" | "halkbank" | "anadolubank" | "hsbc" | "ziraatbank" | "ingbank" | "citibank" | "teb";
 
 export interface INestPayConfiguration {
     name: string;

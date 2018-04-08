@@ -30,13 +30,14 @@ npm install node-nestpay
 - Citibank
 - Cardplus
 - Ziraat Bankası
+- Türk Ekonomi Bankası
 ## Initialization
 **Basic Setup**
 ```
 var nodeNestpay = require('node-nestpay');
 nestpay = new nodeNestpay({
-    name: 'ISBANK',
-    password: 'ISBANK07',
+    name: 'pos_user',
+    password: 'pos_password',
     clientId: 700100000,
     endpoint: 'asseco'
 });
@@ -149,7 +150,7 @@ nestpay.securePurchase({
 ### Endpoint List
 ```
 //You can use any of this endpoints as option in initialization.
-'test', 'asseco', 'isbank', 'akbank', 'finansbank', 'denizbank', 'kuveytturk', 'halkbank', 'anadolubank', 'hsbc', 'ziraatbank, 'ingbank, 'citibank'
+'test', 'asseco', 'isbank', 'akbank', 'finansbank', 'denizbank', 'kuveytturk', 'halkbank', 'anadolubank', 'hsbc', 'ziraatbank, 'ingbank, 'citibank', 'teb
 ```
 ## Examples
 **Purchase, Authorize, Capture, Void, Refund, Secure3d, SecurePurchase examples can be found in examples folder.**
