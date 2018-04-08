@@ -8,9 +8,6 @@ export interface INestPayConfiguration {
     name: string;
     password: string;
     clientId: number;
-    storekey?: string;
-    callbackSuccess?: string;
-    callbackFail?: string;
     mode?: "P" | "T";
     currency?: string;
     orderId?: string;
