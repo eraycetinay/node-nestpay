@@ -19,6 +19,12 @@ export interface INestPayConfiguration {
     lang?: string;
 }
 
+export interface INestPayConfiguration3d extends INestPayConfiguration {
+    storekey: string;
+    callbackSuccess: string;
+    callbackFail: string;
+}
+
 interface INestPaymentRequestMinimal {
     number: string;
     year: string;
@@ -77,7 +83,7 @@ export interface INestSecure3dPurchaseRequest {
 }
 
 export class NestPay {
-    constructor(options: INestPayConfiguration);
+    constructor(options: INestPayConfiguration | INestPayConfiguration3d);
 
     public authorize(options: INestPaymentRequest): Promise<any>;
 
