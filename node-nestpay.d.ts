@@ -38,6 +38,9 @@ export interface INestPaymentRequest extends INestPaymentRequestMinimal {
     orderId?: string;
     groupId?: string;
     transId?: string;
+    storekey?: string;
+    callbackSuccess?: string;
+    callbackFail?: string;
 }
 
 export interface INestSecure3dRequest extends INestPaymentRequestMinimal {
