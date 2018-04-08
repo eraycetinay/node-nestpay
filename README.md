@@ -150,7 +150,7 @@ nestpay.securePurchase({
 ### Endpoint List
 ```
 //You can use any of this endpoints as option in initialization.
-'test', 'asseco', 'isbank', 'akbank', 'finansbank', 'denizbank', 'kuveytturk', 'halkbank', 'anadolubank', 'hsbc', 'ziraatbank, 'ingbank, 'citibank', 'teb
+'test', 'asseco', 'isbank', 'akbank', 'finansbank', 'denizbank', 'kuveytturk', 'halkbank', 'anadolubank', 'hsbc', 'ziraatbank, 'ingbank, 'citibank', 'teb'
 ```
 ## Examples
 **Purchase, Authorize, Capture, Void, Refund, Secure3d, SecurePurchase examples can be found in examples folder.**
