@@ -41,6 +41,26 @@ export interface INestSecure3dRequest extends INestPaymentRequestMinimal {
     secureFormat?: string;
 }
 
+export interface INestSecure3dRequestReturn {
+    form: {
+        clientId: string,
+        oid: string,
+        amount: string,
+        okUrl: string,
+        failUrl: string,
+        rnd: string,
+        currency: string,
+        pan: string,
+        Ecom_Payment_Card_ExpDate_Year: string,
+        Ecom_Payment_Card_ExpDate_Month: string,
+        cv2: string,
+        storetype: '3d',
+        lang: string,
+        hash: string,
+    };
+    url: string;
+}
+
 export interface INestSecure3dPurchaseRequest {
     HASHPARAMSVAL: string;
     HASH: string;
@@ -59,21 +79,21 @@ export interface INestSecure3dPurchaseRequest {
 export class NestPay {
     constructor(options: INestPayConfiguration);
 
-    public authorize(options: INestPaymentRequest): any;
+    public authorize(options: INestPaymentRequest): Promise<any>;
 
-    public capture(options: { orderId: string }): any;
+    public capture(options: { orderId: string }): Promise<any>;
 
-    public purchase(options: INestPaymentRequest): any;
+    public purchase(options: INestPaymentRequest): Promise<any>;
 
-    public refund(options: { amount: number, orderId: string }): any;
+    public refund(options: { amount: number, orderId: string }): Promise<any>;
 
-    public request(url: any, data: any): any;
+    public request(url: any, data: any): Promise<any>;
 
-    public secure3d(options: INestSecure3dRequest): any;
+    public secure3d(options: INestSecure3dRequest): Promise<INestSecure3dRequestReturn | string>;
 
-    public secureAuthorize(options: INestSecure3dPurchaseRequest): any;
+    public secureAuthorize(options: INestSecure3dPurchaseRequest): Promise<any>;
 
-    public securePurchase(options: INestSecure3dPurchaseRequest): any;
+    public securePurchase(options: INestSecure3dPurchaseRequest): Promise<any>;
 
-    public void(options: { orderId: string }): any;
+    public void(options: { orderId: string }): Promise<any>;
 }
