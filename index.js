@@ -1,13 +1,5 @@
 'use strict';
 
-var crypto = require('crypto');
-var xml2js = require('xml2js');
-var rp = require('request-promise');
-var currencyCodes = require('currency-codes');
-var uuid = require('uuid/v1');
-
-'use strict';
-
 function nestpay(value) {
     this.config = {
         name: value.name || '',
