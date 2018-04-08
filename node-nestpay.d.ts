@@ -18,8 +18,8 @@ export interface INestPayConfiguration {
 
 export interface INestPayConfiguration3d extends INestPayConfiguration {
     storekey: string;
-    callbackSuccess: string;
-    callbackFail: string;
+    callbackSuccess?: string;
+    callbackFail?: string;
 }
 
 interface INestPaymentRequestMinimal {
