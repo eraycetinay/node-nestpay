@@ -2,7 +2,7 @@
  * @author  Tümay Çeber <tumayceber@gmail.com>
  * @date 08.04.2018
  */
-export type endpoint = string | "test" | "asseco" | "isbank" | "akbank" | "finansbank" | "denizbank" | "kuveytturk" | "halkbank" | "anadolubank" | "hsbc" | "ziraatbank" | "ingbank" | "citibank";
+export type endpoint = string | "test" | "asseco" | "isbank" | "akbank" | "finansbank" | "denizbank" | "kuveytturk" | "halkbank" | "anadolubank" | "hsbc" | "ziraatbank" | "ingbank" | "citibank" | "teb";
 
 export interface INestPayConfiguration {
     name: string;
@@ -11,7 +11,7 @@ export interface INestPayConfiguration {
     storekey?: string;
     callbackSuccess?: string;
     callbackFail?: string;
-    mode?: string;
+    mode?: "P" | "T";
     currency?: string;
     orderId?: string;
     secureFormat?: string;
@@ -25,10 +25,6 @@ interface INestPaymentRequestMinimal {
     month: string;
     cvv: string;
     amount: string;
-    installment?: number;
-    orderId?: string;
-    groupId?: string;
-    transId?: string;
 }
 
 export interface INestPaymentRequest extends INestPaymentRequestMinimal {
@@ -40,8 +36,6 @@ export interface INestPaymentRequest extends INestPaymentRequestMinimal {
 
 export interface INestSecure3dRequest extends INestPaymentRequestMinimal {
     orderId?: string;
-    groupId?: string;
-    transId?: string;
     lang?: string;
     timestamp?: string;
     secureFormat?: string;
@@ -59,6 +53,7 @@ export interface INestSecure3dPurchaseRequest {
     orderId?: string;
     groupId?: string;
     transId?: string;
+    userId?: string;
 }
 
 export class NestPay {
@@ -72,9 +67,13 @@ export class NestPay {
 
     public refund(options: { amount: number, orderId: string }): any;
 
+    public request(url: any, data: any): any;
+
     public secure3d(options: INestSecure3dRequest): any;
 
-    public securePurchase(options: any): any;
+    public secureAuthorize(options: INestSecure3dPurchaseRequest): any;
+
+    public securePurchase(options: INestSecure3dPurchaseRequest): any;
 
     public void(options: { orderId: string }): any;
 }
