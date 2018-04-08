@@ -14,22 +14,22 @@ nestpay.purchase({
     month: '12',
     cvv: '000',
     amount: '10'
-}).then(function(purchaseResult) {
+}).then(function (purchaseResult) {
 
     console.log('Purchased');
     console.log(purchaseResult);
 
-    nestpay.void({ orderId: purchaseResult.OrderId }).then(function(voidResult) {
+    nestpay.void({orderId: purchaseResult.OrderId}).then(function (voidResult) {
 
         console.log('Canceled');
         console.log(voidResult);
 
-    }).catch(function(voidError) {
+    }).catch(function (voidError) {
 
         console.log(voidError);
     });
 
-}).catch(function(purchaseError) {
+}).catch(function (purchaseError) {
 
     console.log(purchaseError);
 

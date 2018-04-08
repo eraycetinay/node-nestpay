@@ -8,7 +8,7 @@ var uuid = require('uuid/v1');
 
 'use strict';
 
-function nestpay(value) { 
+function nestpay(value) {
     this.config = {
         name: value.name || '',
         password: value.password || '',
@@ -62,8 +62,8 @@ require('./methods/authorize')(nestpay);
 require('./methods/void')(nestpay);
 require('./methods/refund')(nestpay);
 require('./methods/capture')(nestpay);
-require('./methods/secure3d')(nestpay); 
-require('./methods/securePurchase')(nestpay); 
-require('./methods/secureAuthorize')(nestpay); 
-require('./methods/request')(nestpay); 
+require('./methods/secure3d')(nestpay);
+require('./methods/securePurchase')(nestpay);
+require('./methods/secureAuthorize')(nestpay);
+require('./methods/request')(nestpay);
 module.exports = nestpay; 
