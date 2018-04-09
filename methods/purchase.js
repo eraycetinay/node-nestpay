@@ -3,10 +3,10 @@
 var currencyCodes = require('currency-codes');
 var uuid = require('uuid/v1');
 
-module.exports = function(nestpay) {
-    nestpay.prototype.purchase = function(value = {}) {
+module.exports = function (nestpay) {
+    nestpay.prototype.purchase = function (value = {}) {
         var that = this;
-        return new Promise(function(resolve, reject) {
+        return new Promise(function (resolve, reject) {
             var currencyNumber = currencyCodes.code(value.currency || that.config.currency);
             currencyNumber = currencyNumber ? currencyNumber.number : '';
             var order = value.orderId ? (value.orderId == 'Auto' ? uuid() : value.orderId) : (that.config.orderId == 'Auto' ? uuid() : '')
@@ -27,10 +27,10 @@ module.exports = function(nestpay) {
                 Number: value.number || '',
                 Expires: (value.month || '') + '/' + (value.year || ''),
                 Cvv2Val: value.cvv || ''
-            }; 
+            };
 
-            var url=that.config.endpoints[that.config.endpoint];
-            that.request(url,data).then(resolve).catch(reject);
+            var url = that.config.endpoints[that.config.endpoint];
+            that.request(url, data).then(resolve).catch(reject);
         });
     }
 }

@@ -17,11 +17,11 @@ nestpay.secure3d({
     month: '12',
     cvv: '000',
     amount: '10'
-}).then(function(secure3dResult) {
+}).then(function (secure3dResult) {
 
     console.log(secure3dResult);
 
-}).catch(function(secure3dError) {
+}).catch(function (secure3dError) {
 
     console.log(secure3dError);
 

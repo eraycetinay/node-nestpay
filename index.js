@@ -1,14 +1,6 @@
 'use strict';
 
-var crypto = require('crypto');
-var xml2js = require('xml2js');
-var rp = require('request-promise');
-var currencyCodes = require('currency-codes');
-var uuid = require('uuid/v1');
-
-'use strict';
-
-function nestpay(value) { 
+function nestpay(value) {
     this.config = {
         name: value.name || '',
         password: value.password || '',
@@ -35,7 +27,8 @@ function nestpay(value) {
             'ziraatbank': 'https://sanalpos2.ziraatbank.com.tr/fim/api',
             'ingbank': 'https://sanalpos.ingbank.com.tr/fim/api',
             'citibank': 'https://citibank.est.com.tr/fim/api',
-            'cardplus': 'https://cardplus.est.com.tr/fim/api'
+            'cardplus': 'https://cardplus.est.com.tr/fim/api',
+            'teb': 'https://sanalpos.teb.com.tr/fim/api'
         },
         endpoints3d: {
             'test': 'https://testvpos.asseco-see.com.tr/fim/est3Dgate',
@@ -51,7 +44,8 @@ function nestpay(value) {
             'ziraatbank': 'https://sanalpos2.ziraatbank.com.tr/fim/est3Dgate',
             'ingbank': 'https://sanalpos.ingbank.com.tr/fim/est3Dgate',
             'citibank': 'https://citibank.est.com.tr/fim/est3Dgate',
-            'cardplus': 'https://cardplus.est.com.tr/fim/est3Dgate'
+            'cardplus': 'https://cardplus.est.com.tr/fim/est3Dgate',
+            'teb': 'https://sanalpos.teb.com.tr/fim/est3Dgate'
         },
         lang: value.lang || 'tr'
     }
@@ -62,8 +56,8 @@ require('./methods/authorize')(nestpay);
 require('./methods/void')(nestpay);
 require('./methods/refund')(nestpay);
 require('./methods/capture')(nestpay);
-require('./methods/secure3d')(nestpay); 
-require('./methods/securePurchase')(nestpay); 
-require('./methods/secureAuthorize')(nestpay); 
-require('./methods/request')(nestpay); 
+require('./methods/secure3d')(nestpay);
+require('./methods/securePurchase')(nestpay);
+require('./methods/secureAuthorize')(nestpay);
+require('./methods/request')(nestpay);
 module.exports = nestpay; 

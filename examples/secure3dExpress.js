@@ -3,7 +3,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express()
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 nestpay = new nodeNestpay({
@@ -17,7 +17,7 @@ nestpay = new nodeNestpay({
     currency: 'TRY',
 });
 
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
 
     nestpay.secure3d({
         number: '4022774022774026',
@@ -26,11 +26,11 @@ app.get('/', function(req, res) {
         cvv: '000',
         amount: '10',
         secureFormat: 'html'
-    }).then(function(secure3dResult) {
+    }).then(function (secure3dResult) {
 
         res.send(secure3dResult);
 
-    }).catch(function(secure3dError) {
+    }).catch(function (secure3dError) {
 
         res.send(secure3dError);
 
@@ -38,11 +38,11 @@ app.get('/', function(req, res) {
 
 })
 
-app.post('/fail', function(req, res) {
+app.post('/fail', function (req, res) {
     res.send(req.body);
 });
 
-app.post('/success', function(req, res) {
+app.post('/success', function (req, res) {
 
     nestpay.securePurchase({
         md: req.body.md,
@@ -53,17 +53,17 @@ app.post('/success', function(req, res) {
         HASHPARAMSVAL: req.body.HASHPARAMSVAL,
         oid: req.body.oid,
         amount: '10',
-    }).then(function(securePurchaseResult) {
+    }).then(function (securePurchaseResult) {
 
         res.send(securePurchaseResult);
 
-    }).catch(function(securePurchaseError) {
+    }).catch(function (securePurchaseError) {
 
         res.send(securePurchaseError);
 
     });
 });
 
-app.listen(3000, function() {
+app.listen(3000, function () {
     console.log('Example is ready. (Url: localhost:3000)');
 })

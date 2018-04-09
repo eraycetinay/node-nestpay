@@ -1,14 +1,14 @@
 'use strict';
 
 var crypto = require('crypto');
-var currencyCodes = require('currency-codes'); 
+var currencyCodes = require('currency-codes');
 
-module.exports = function(nestpay) {
-    nestpay.prototype.secureAuthorize = function(value = {}) {
+module.exports = function (nestpay) {
+    nestpay.prototype.secureAuthorize = function (value = {}) {
         var that = this;
-        return new Promise(function(resolve, reject) {
+        return new Promise(function (resolve, reject) {
             var currencyNumber = currencyCodes.code(value.currency || that.config.currency);
-            currencyNumber = currencyNumber ? currencyNumber.number : ''; 
+            currencyNumber = currencyNumber ? currencyNumber.number : '';
 
             var data = {
                 Name: that.config.name,
@@ -22,20 +22,21 @@ module.exports = function(nestpay) {
                 GroupId: value.groupId || '',
                 TransId: value.transId || '',
                 UserId: value.userId || '',
-                Total: value.amount || '', 
+                Total: value.amount || '',
                 CardholderPresentCode: '13', //
-            }; 
+            };
             var sha = crypto.createHash('sha1').update(value.HASHPARAMSVAL + (value.storekey || that.config.storekey)).digest('base64');
             if (sha != value.HASH) {
                 reject();
-            } else {
+            }
+            else {
                 data.Number = value.md;
                 data.PayerTxnId = value.xid;
                 data.PayerSecurityLevel = value.eci;
                 data.PayerAuthenticationCode = value.cavv;
 
-                var url=that.config.endpoints[that.config.endpoint];
-                that.request(url,data).then(resolve).catch(reject);
+                var url = that.config.endpoints[that.config.endpoint];
+                that.request(url, data).then(resolve).catch(reject);
             }
         });
     }

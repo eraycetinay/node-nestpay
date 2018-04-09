@@ -6,10 +6,10 @@ var uuid = require('uuid/v1');
 var ejs = require('ejs');
 var fs = require('fs');
 
-module.exports = function(nestpay) {
-    nestpay.prototype.secure3d = function(value = {}) {
+module.exports = function (nestpay) {
+    nestpay.prototype.secure3d = function (value = {}) {
         var that = this;
-        return new Promise(function(resolve, reject) {
+        return new Promise(function (resolve, reject) {
             var currencyNumber = currencyCodes.code(value.currency || that.config.currency);
             currencyNumber = currencyNumber ? currencyNumber.number : '';
             var order = value.orderId ? (value.orderId == 'Auto' ? uuid() : value.orderId) : (that.config.orderId == 'Auto' ? uuid() : '')
@@ -37,8 +37,9 @@ module.exports = function(nestpay) {
 
             if ((!value.secureFormat && that.config.secureFormat == 'html') || (value.secureFormat && value.secureFormat.toLowerCase() == 'html')) {
                 var content = fs.readFileSync(require('path').resolve(__dirname, `../templates/secure.html`), 'utf8');
-                resolve(ejs.render(content, { postData: data }));
-            } else {
+                resolve(ejs.render(content, {postData: data}));
+            }
+            else {
                 resolve(data);
             }
         });

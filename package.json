@@ -3,6 +3,7 @@
   "version": "1.0.3",
   "author": "Eray Cetinay <eraycetinay@gmail.com>",
   "main": "index.js",
+  "typings": "./node-nestpay.d.ts",
   "description": "A NodeJS module to interface with Nestpay Payment Gateway.",
   "repository": {
     "type": "git",
