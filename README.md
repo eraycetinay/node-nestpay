@@ -36,9 +36,9 @@ npm install node-nestpay
 ```
 var nodeNestpay = require('node-nestpay');
 nestpay = new nodeNestpay({
-    name: 'pos_user',
-    password: 'pos_password',
-    clientId: 700100000,
+    name: '******',
+    password: '******',
+    clientId: '******',
     endpoint: 'asseco'
 });
 ```
@@ -147,9 +147,27 @@ nestpay.securePurchase({
     transId: '123456',           
 })
 ```
+#### SecureAuthorize
+```
+nestpay.secureAuthorize({
+    //required options
+    HASHPARAMSVAL: 'xxx',
+    HASH: 'xxx',
+    md: 'xxx',
+    xid: 'xxx',
+    eci: 'xxx',
+    cavv: 'xxx',
+    amount: '10'
+    //additional options
+    installment: 3,
+    orderId: '123456',
+    groupId: '123456',
+    transId: '123456',           
+})
+```
 ### Endpoint List
 ```
-//You can use any of this endpoints as option in initialization.
+//You can use any of this as endpoint parameter in initialization.
 'test', 'asseco', 'isbank', 'akbank', 'finansbank', 'denizbank', 'kuveytturk', 'halkbank', 'anadolubank', 'hsbc', 'ziraatbank, 'ingbank, 'citibank', 'teb'
 ```
 ## Examples
@@ -158,9 +176,9 @@ nestpay.securePurchase({
 var nodeNestpay = require('../index.js');
 
 nestpay = new nodeNestpay({
-    name: 'ISBANK',
-    password: 'ISBANK07',
-    clientId: 700100000,
+    name: '******',
+    password: '******',
+    clientId: '******',
     endpoint: 'asseco',
     currency: 'TRY'
 });

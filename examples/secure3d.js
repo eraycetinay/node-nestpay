@@ -1,10 +1,10 @@
 var nodeNestpay = require('../index.js');
 
 nestpay = new nodeNestpay({
-    clientId: '150150100',
-    name: 'INGBANKAPI',
-    password: 'INGBANK15',
-    storekey: 'TRPS1234',
+    name: 'AKTESTAPI',
+    password: 'AKBANK01',
+    clientId: 100100000,
+    storekey: '123456',
     callbackSuccess: 'http://localhost:3000/success',
     callbackFail: 'http://localhost:3000/fail',
     endpoint: 'asseco',

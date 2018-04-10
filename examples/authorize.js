@@ -1,9 +1,9 @@
 var nodeNestpay = require('../index.js');
 
 nestpay = new nodeNestpay({
-    name: 'ISBANK',
-    password: 'ISBANK07',
-    clientId: 700100000,
+    name: 'AKTESTAPI',
+    password: 'AKBANK01',
+    clientId: 100100000,
     endpoint: 'asseco',
     currency: 'TRY'
 });

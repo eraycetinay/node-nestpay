@@ -27,7 +27,7 @@ module.exports = function (nestpay) {
             };
             var sha = crypto.createHash('sha1').update(value.HASHPARAMSVAL + (value.storekey || that.config.storekey)).digest('base64');
             if (sha != value.HASH) {
-                reject();
+                reject('invalid hash');
             }
             else {
                 data.Number = value.md;

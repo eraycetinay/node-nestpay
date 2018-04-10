@@ -1,3 +1,6 @@
+//please use "npm install express body-parser" command first to use this example.
+//3d password is "a" for the test credit card.
+
 var nodeNestpay = require('../index.js');
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -7,10 +10,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 nestpay = new nodeNestpay({
-    clientId: '150150100',
-    name: 'INGBANKAPI',
-    password: 'INGBANK15',
-    storekey: 'TRPS1234',
+    name: 'AKTESTAPI',
+    password: 'AKBANK01',
+    clientId: 100100000,
+    storekey: '123456',
     callbackSuccess: 'http://localhost:3000/success',
     callbackFail: 'http://localhost:3000/fail',
     endpoint: 'asseco',

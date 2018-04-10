@@ -29,7 +29,7 @@ module.exports = function (nestpay) {
                         }
                     }
                 );
-            }).catch(function (err) {
+            }).catch(function (errorGateway) {
                 reject(errorGateway);
             });
         });
