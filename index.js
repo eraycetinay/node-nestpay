@@ -16,7 +16,7 @@ function nestpay(value) {
         endpoints: {
             'test': 'https://testvpos.asseco-see.com.tr/fim/api',
             'asseco': 'https://entegrasyon.asseco-see.com.tr/fim/api',
-            'isbank': 'https://spos.isbank.com.tr/fim/api',
+            'isbank': 'https://vpos3.isbank.com.tr/fim/api',
             'akbank': 'https://www.sanalakpos.com/fim/api',
             'finansbank': 'https://www.fbwebpos.com/fim/api',
             'denizbank': 'https://denizbank.est.com.tr/fim/api',
@@ -33,7 +33,7 @@ function nestpay(value) {
         endpoints3d: {
             'test': 'https://testvpos.asseco-see.com.tr/fim/est3Dgate',
             'asseco': 'https://entegrasyon.asseco-see.com.tr/fim/est3Dgate',
-            'isbank': 'https://spos.isbank.com.tr/fim/est3Dgate',
+            'isbank': 'https://vpos3.isbank.com.tr/fim/est3Dgate',
             'akbank': 'https://www.sanalakpos.com/fim/est3Dgate',
             'finansbank': 'https://www.fbwebpos.com/fim/est3Dgate',
             'denizbank': 'https://denizbank.est.com.tr/fim/est3Dgate',
