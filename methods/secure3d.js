@@ -34,7 +34,7 @@ module.exports = function (nestpay) {
                Ecom_Payment_Card_ExpDate_Year: value.year || '',
                Ecom_Payment_Card_ExpDate_Month: value.month || '',
                cv2: value.cvv || '',
-               storetype: '3d',
+               storetype: value?.storetype || that.config?.storetype,
                lang: value.lang || that.config.lang,
             },
             url: that.config.endpoints3d[that.config.endpoint],
