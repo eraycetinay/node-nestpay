@@ -1,0 +1,48 @@
+<html>
+   <head> </head>
+   <body>
+      <form id='nestPay3d' method='post' action='{{url}}'>
+         <!--clientId-->
+         <input type='hidden' name='clientid' value='{{form.clientId}}' />
+         <!--storetype-->
+         <input type='hidden' name='storetype' value='{{form.storetype}}' />
+         <!--hash-->
+         <input type='hidden' name='hash' value='{{form.hash}}' />
+         <!--islemtipi-->
+         <input type='hidden' name='islemtipi' value='Auth' />
+         <!--amount-->
+         <input type='hidden' name='amount' value='{{form.amount}}' />
+         <!--currency-->
+         <input type='hidden' name='currency' value='{{form.currency}}' />
+         <!--oid-->
+         <input type='hidden' name='oid' value='{{form.oid}}' />
+         <!--okUrl-->
+         <input type='hidden' name='okUrl' value='{{form.okUrl}}' />
+         <!--failUrl-->
+         <input type='hidden' name='failUrl' value='{{form.failUrl}}' />
+         <!--lang-->
+         <input type='hidden' name='lang' value='{{form.lang}}' />
+         <!--rnd-->
+         <input type='hidden' name='rnd' value='{{form.rnd}}' />
+         <!--pan-->
+         <input type='hidden' name='pan' value='{{form.pan}}' size='20' />
+         <!--Ecom_Payment_Card_ExpDate_Year-->
+         <input
+            type='hidden'
+            name='Ecom_Payment_Card_ExpDate_Year'
+            value='{{form.Ecom_Payment_Card_ExpDate_Year}}'
+         />
+         <!--Ecom_Payment_Card_ExpDate_Month-->
+         <input
+            type='hidden'
+            name='Ecom_Payment_Card_ExpDate_Month'
+            value='{{form.Ecom_Payment_Card_ExpDate_Month}}'
+         />
+         <!--cv2-->
+         <input type='hidden' name='cv2' value='{{form.cv2}}' size='4' />
+      </form>
+      <script type='text/javascript'>
+         document.getElementById('nestPay3d').submit()
+      </script>
+   </body>
+</html>

@@ -1,30 +1,30 @@
 {
-  "name": "node-nestpay",
-  "version": "1.0.4",
-  "author": "Eray Cetinay <eraycetinay@gmail.com>",
-  "main": "index.js",
-  "typings": "./node-nestpay.d.ts",
-  "description": "A NodeJS module to interface with Nestpay Payment Gateway.",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/eraycetinay/node-nestpay.git"
-  },
-  "keywords": [
-    "est",
-    "nestpay",
-    "payment",
-    "gateway",
-    "turkey"
-  ],
-  "license": "MIT",
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "currency-codes": "^1.1.2",
-    "ejs": "^2.5.7",
-    "express": "^4.16.3",
-    "request": "^2.83.0",
-    "request-promise": "^4.2.2",
-    "uuid": "^3.1.0",
-    "xml2js": "^0.4.17"
-  }
+   "name": "node-nestpay",
+   "version": "1.0.4",
+   "author": "Eray Cetinay <eraycetinay@gmail.com>",
+   "main": "index.js",
+   "typings": "./node-nestpay.d.ts",
+   "description": "A NodeJS module to interface with Nestpay Payment Gateway.",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/eraycetinay/node-nestpay.git"
+   },
+   "keywords": [
+      "est",
+      "nestpay",
+      "payment",
+      "gateway",
+      "turkey"
+   ],
+   "license": "MIT",
+   "dependencies": {
+      "body-parser": "^1.18.2",
+      "currency-codes": "^1.1.2",
+      "express": "^4.16.3",
+      "express-handlebars": "^6.0.2",
+      "request": "^2.83.0",
+      "request-promise": "^4.2.2",
+      "uuid": "^3.1.0",
+      "xml2js": "^0.4.17"
+   }
 }
