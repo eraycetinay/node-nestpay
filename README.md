@@ -1,7 +1,6 @@
 # node-nestpay
 
 [![npm version](https://badge.fury.io/js/node-nestpay.svg)](https://badge.fury.io/js/node-nestpay)
-[![dependency Status](https://david-dm.org/eraycetinay/node-nestpay.svg)](https://david-dm.org/eraycetinay/node-nestpay.svg)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
 A NodeJS module to interface with Nestpay Payment Gateway.
