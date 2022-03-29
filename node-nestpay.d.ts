@@ -82,7 +82,7 @@ export interface INestSecure3dPurchaseRequest {
     userId?: string;
 }
 
-export class NestPay {
+export default class NestPay {
     constructor(options: INestPayConfiguration | INestPayConfiguration3d);
 
     public authorize(options: INestPaymentRequest): Promise<any>;
