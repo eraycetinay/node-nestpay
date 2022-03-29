@@ -34,7 +34,7 @@ module.exports = function (nestpay) {
                Ecom_Payment_Card_ExpDate_Year: value.year || '',
                Ecom_Payment_Card_ExpDate_Month: value.month || '',
                cv2: value.cvv || '',
-               storetype: value?.storetype || that.config?.storetype,
+               storetype: value.storetype || that.config.storetype,
                lang: value.lang || that.config.lang,
             },
             url: that.config.endpoints3d[that.config.endpoint],
@@ -57,8 +57,8 @@ module.exports = function (nestpay) {
 
          // if secure format is set
          if (
-            value?.secureFormat === 'html' ||
-            that.config?.secureFormat === 'html'
+            value.secureFormat === 'html' ||
+            that.config.secureFormat === 'html'
          ) {
             HandlebarsRenderer.render('secure', data).then(function (html) {
                resolve(html)

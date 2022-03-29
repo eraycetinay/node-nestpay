@@ -1,7 +1,8 @@
 const hbs = require('express-handlebars').create()
+const path = require('path')
 
 module.exports.render = async function (templateName, context) {
-   const path = `templates/${templateName}.hbs`
-   const html = await hbs.render(path, context)
+   const hbspath = path.join(__dirname,`../templates/${templateName}.hbs`)
+   const html = await hbs.render(hbspath, context)
    return html
 }
