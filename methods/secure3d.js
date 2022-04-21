@@ -36,6 +36,7 @@ module.exports = function (nestpay) {
                cv2: value.cvv || '',
                storetype: value.storetype || that.config.storetype,
                lang: value.lang || that.config.lang,
+               processType: value.processType
             },
             url: that.config.endpoints3d[that.config.endpoint],
          }
@@ -46,6 +47,7 @@ module.exports = function (nestpay) {
             data.form.amount,
             data.form.okUrl,
             data.form.failUrl,
+            data.form.processType,
             data.form.rnd,
             value.storekey || that.config.storekey,
          ].join('')

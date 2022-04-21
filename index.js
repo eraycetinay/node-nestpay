@@ -14,6 +14,7 @@ function nestpay(value) {
       callbackFail: value.callbackFail || '',
       secureFormat: value.secureFormat || '',
       endpoint: value.endpoint || 'asseco',
+      processType: value.processType || 'Auth',
       endpoints: {
          test: 'https://testvpos.asseco-see.com.tr/fim/api',
          asseco: 'https://entegrasyon.asseco-see.com.tr/fim/api',
