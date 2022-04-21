@@ -36,11 +36,11 @@ module.exports = function (nestpay) {
                cv2: value.cvv || '',
                storetype: value.storetype || that.config.storetype,
                lang: value.lang || that.config.lang,
-               processType: value.processType
+               processType: value.processType || that.config.processType,
             },
             url: that.config.endpoints3d[that.config.endpoint],
          }
-
+         
          const hashstr = [
             data.form.clientId,
             data.form.oid,
