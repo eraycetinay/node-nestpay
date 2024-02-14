@@ -18,7 +18,7 @@ function nestpay(value) {
       endpoints: {
          test: 'https://testvpos.asseco-see.com.tr/fim/api',
          asseco: 'https://entegrasyon.asseco-see.com.tr/fim/api',
-         isbank: 'https://vpos3.isbank.com.tr/fim/api',
+         isbank: 'https://sanalpos.isbank.com.tr/fim/api',
          akbank: 'https://www.sanalakpos.com/fim/api',
          finansbank: 'https://www.fbwebpos.com/fim/api',
          denizbank: 'https://denizbank.est.com.tr/fim/api',
